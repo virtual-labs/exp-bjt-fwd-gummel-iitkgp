@@ -1,115 +1,117 @@
   {
 	  "version": 2.0,
   "questions": [
-    {
-      "question": "1. What does the term 'Gummel plot' specifically refer to in the context of BJT characterization?",
-      "answers": {
-        "a": "A plot of base-emitter voltage (V_BE) versus collector current (I_C)",
-        "b": "A plot of base current (I_B) versus base-emitter voltage (V_BE)",
-        "c": "A plot of collector current (I_C) versus base current (I_B)",
-        "d": "A plot of base-emitter voltage (V_BE) versus base current (I_B)"
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
+    
+  {
+    "question": "1. In a forward Gummel plot, what is the primary effect of the emitter series resistance, `RE`?",
+    "answers": {
+      "a": "It causes only the base current, $I_b$, to roll off at high currents.",
+      "b": "It causes both $I_c$ and $I_b$ to roll off at high currents.",
+      "c": "It causes the slopes of $I_c$ and $I_b$ to change at low currents.",
+      "d": "It shifts the entire $I_c$ curve downwards, changing the extracted `IS`."
     },
-    {
-      "question": "2. In a Gummel plot, what does the slope of the base current (I_B) versus base-emitter voltage (V_BE) plot represent?",
-      "answers": {
-        "a": "Saturation current (I_S)",
-        "b": "Current gain (\u03b2)",
-        "c": "Emitter efficiency",
-        "d": "Thermal voltage (V_T)"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+    "correctAnswer": "b",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "2. What is the characteristic effect of the collector series resistance, `RC`, on a forward Gummel plot measured at $V_{bc} = 0$?",
+    "answers": {
+      "a": "It has no effect, as $V_{bc}$ is held at zero.",
+      "b": "It causes the $I_c$ curve to roll off at high currents due to quasi-saturation.",
+      "c": "It causes the $I_b$ curve to increase sharply at high currents.",
+      "d": "It only affects the slope of the $I_b$ curve at low currents."
     },
-    {
-      "question": "3. The Gummel plot is commonly used to determine which of the following parameters of a BJT?",
-      "answers": {
-        "a": "Collector-emitter voltage (V_CE)",
-        "b": "Base-emitter voltage (V_BE)",
-        "c": "Saturation current (I_S)",
-        "d": "Thermal resistance (R_th)"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
+    "correctAnswer": "b",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "3. The "roll-off," or decrease, of the current gain (Beta = $I_c / I_b$) at *low* currents is primarily caused by which effect?",
+    "answers": {
+      "a": "High-level injection in the base, modeled by `IKF`.",
+      "b": "The Early effect, modeled by `VAF`.",
+      "c": "The non-ideal base-emitter recombination current (modeled by `ISE` and `NE`) becoming a larger fraction of the total base current.",
+      "d": "Parasitic emitter resistance `RE`."
     },
-    {
-      "question": "4. What is the primary purpose of characterizing a BJT using the Gummel plot method?",
-      "answers": {
-        "a": "To analyze power dissipation",
-        "b": "To optimize frequency response",
-        "c": "To extract key parameters like current gain and saturation current",
-        "d": "To measure voltage drop across the collector-emitter junction"
-      },
-      "correctAnswer": "c",
-      "difficulty": "intermediate"
+    "correctAnswer": "c",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "4. The roll-off of current gain (Beta) at *high* currents is primarily modeled by which two SPICE parameters?",
+    "answers": {
+      "a": "`ISE` and `NE`",
+      "b": "`IS` and `NF`",
+      "c": "`IKF` and `RB`",
+      "d": "`VAF` and `VAR`"
     },
-    {
-      "question": "5. What does the ideality factor in a BJT refer to?",
-      "answers": {
-        "a": "A measure of how closely the BJT follows the ideal exponential relationship",
-        "b": "A measure of collector current efficiency",
-        "c": "A measure of base current leakage",
-        "d": "A measure of temperature dependence"
-      },
-      "correctAnswer": "a",
-      "difficulty": "intermediate"
+    "correctAnswer": "c",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "5. If an engineer extracts parameters but fails to account for the emitter resistance `RE`, how will this likely affect the extracted value of the high-injection parameter, `IKF`?",
+    "answers": {
+      "a": "The extracted `IKF` will be unaffected.",
+      "b": "The extracted `IKF` will appear higher (more ideal) than its true value.",
+      "c": "The extracted `IKF` will appear lower (less ideal) than its true value.",
+      "d": "The extracted `IKF` will become a negative number."
     },
-    {
-      "question": "6. How does the Gummel plot help in analyzing BJT operation in different regions?",
-      "answers": {
-        "a": "By identifying breakdown voltage",
-        "b": "By showing linear and saturation regions clearly",
-        "c": "By measuring thermal resistance",
-        "d": "By calculating power gain"
-      },
-      "correctAnswer": "b",
-      "difficulty": "intermediate"
+    "correctAnswer": "c",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "6. The main transport saturation current, `IS`, is physically inversely proportional to which quantity?",
+    "answers": {
+      "a": "The base-emitter junction area.",
+      "b": "The intrinsic carrier concentration, $n_i^2$.",
+      "c": "The base Gummel Number (total integrated doping in the base).",
+      "d": "The forward current gain, `BF`."
     },
-    {
-      "question": "7. What does the slope of the collector current (I_C) versus base-emitter voltage (V_BE) plot determine?",
-      "answers": {
-        "a": "Emitter efficiency",
-        "b": "Saturation current (I_S)",
-        "c": "Current gain (\u03b2)",
-        "d": "Thermal voltage (V_T)"
-      },
-      "correctAnswer": "b",
-      "difficulty": "advanced"
+    "correctAnswer": "c",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "7. The Gummel-Poon parameter `BF` (Ideal Maximum Forward Beta) models the ratio of which two current *components*?",
+    "answers": {
+      "a": "Total collector current ($I_c$) and total base current ($I_b$).",
+      "b": "Ideal collector diffusion current and ideal base diffusion current.",
+      "c": "Collector current at `IKF` and base current at `IKF`.",
+      "d": "Ideal collector diffusion current and non-ideal base recombination current."
     },
-    {
-      "question": "8. In a Gummel plot, what does the term 'early effect' refer to?",
-      "answers": {
-        "a": "Voltage dependence of collector current",
-        "b": "Temperature dependence of base current",
-        "c": "Voltage dependence of base current",
-        "d": "Temperature dependence of collector current"
-      },
-      "correctAnswer": "a",
-      "difficulty": "advanced"
+    "correctAnswer": "b",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "8. Besides numerical optimization, what graphical technique is often used to extract the base resistance, `RB`?",
+    "answers": {
+      "a": "Extrapolating the $log(I_c)$ curve to $V_{be} = 0$.",
+      "b": "Measuring the slope of the $log(I_b)$ curve at low $V_{be}$.",
+      "c": "Analyzing the deviation of the $I_b$ curve from its ideal slope at high currents.",
+      "d": "Plotting $I_c$ vs. $V_{ce}$ (an output characteristic plot)."
     },
-    {
-      "question": "9. How can the Gummel plot aid in optimizing BJT circuit design?",
-      "answers": {
-        "a": "By minimizing thermal resistance",
-        "b": "By maximizing current gain",
-        "c": "By ensuring proper biasing and performance",
-        "d": "By increasing breakdown voltage"
-      },
-      "correctAnswer": "c",
-      "difficulty": "advanced"
+    "correctAnswer": "c",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "9. How does a significant increase in temperature typically affect a forward Gummel plot?",
+    "answers": {
+      "a": "It shifts both $I_c$ and $I_b$ curves to the right (higher $V_{be}$).",
+      "b": "It shifts both $I_c$ and $I_b$ curves to the left (lower $V_{be}$).",
+      "c": "It only increases the current gain, `BF`, without shifting the curves.",
+      "d": "It only increases the high-injection knee current, `IKF`."
     },
-    {
-      "question": "10. What region of operation is characterized by a Gummel plot where collector current (I_C) remains relatively constant with changes in base-emitter voltage (V_BE)?",
-      "answers": {
-        "a": "Cut-off",
-        "b": "Active",
-        "c": "Saturation",
-        "d": "Breakdown"
-      },
-      "correctAnswer": "c",
-      "difficulty": "advanced"
-    }
+    "correctAnswer": "b",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "10. The total base current $I_b$ in the SPICE model is a sum of several components. Which component is *also* modeled but is typically negligible in a *forward* Gummel plot ($V_{bc}=0$)?",
+    "answers": {
+      "a": "The ideal base current (modeled by `IS`/`BF`).",
+      "b": "The B-E non-ideal recombination current (modeled by `ISE`).",
+      "c": "The B-C leakage/recombination current (modeled by `ISC` and `NC`).",
+      "d": "The component of base current due to high-level injection."
+    },
+    "correctAnswer": "c",
+    "difficulty": "intermediate"
+  }
+
   ]
 }
