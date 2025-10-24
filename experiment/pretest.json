@@ -25,7 +25,7 @@
     "difficulty": "advanced"
   },
   {
-    "question": "3. The "roll-off," or decrease, of the current gain (Beta = $I_c / I_b$) at *low* currents is primarily caused by which effect?",
+    "question": "3. The roll-off, or decrease, of the current gain (Beta = $I_c / I_b$) at *low* currents is primarily caused by which effect?",
     "answers": {
       "a": "High-level injection in the base, modeled by `IKF`.",
       "b": "The Early effect, modeled by `VAF`.",
