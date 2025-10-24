@@ -2,7 +2,7 @@
 **Introduction:**  
 BJT Parameter Extraction from Forward Gummel Plots
 <div align="center">
-    <img src="images/th3.png" alt="Threshold Voltage and Inversion charge">  
+    <img src="images/th4.png" alt="Threshold Voltage and Inversion charge">  
       <p><strong>Fig. 1. Forward I-V Characteristic & Parameter Extraction</strong></p>
 </div>
 
