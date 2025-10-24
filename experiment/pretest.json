@@ -1,39 +1,117 @@
-{
-  "version": 2.0,
+  {
+	  "version": 2.0,
   "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+    
+  {
+    "question": "1. In a forward Gummel plot, what is the primary effect of the emitter series resistance, `RE`?",
+    "answers": {
+      "a": "It causes only the base current, $I_b$, to roll off at high currents.",
+      "b": "It causes both $I_c$ and $I_b$ to roll off at high currents.",
+      "c": "It causes the slopes of $I_c$ and $I_b$ to change at low currents.",
+      "d": "It shifts the entire $I_c$ curve downwards, changing the extracted `IS`."
     },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
+    "correctAnswer": "b",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "2. What is the characteristic effect of the collector series resistance, `RC`, on a forward Gummel plot measured at $V_{bc} = 0$?",
+    "answers": {
+      "a": "It has no effect, as $V_{bc}$ is held at zero.",
+      "b": "It causes the $I_c$ curve to roll off at high currents due to quasi-saturation.",
+      "c": "It causes the $I_b$ curve to increase sharply at high currents.",
+      "d": "It only affects the slope of the $I_b$ curve at low currents."
+    },
+    "correctAnswer": "b",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "3. The roll-off, or decrease, of the current gain (Beta = $I_c / I_b$) at *low* currents is primarily caused by which effect?",
+    "answers": {
+      "a": "High-level injection in the base, modeled by `IKF`.",
+      "b": "The Early effect, modeled by `VAF`.",
+      "c": "The non-ideal base-emitter recombination current (modeled by `ISE` and `NE`) becoming a larger fraction of the total base current.",
+      "d": "Parasitic emitter resistance `RE`."
+    },
+    "correctAnswer": "c",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "4. The roll-off of current gain (Beta) at *high* currents is primarily modeled by which two SPICE parameters?",
+    "answers": {
+      "a": "`ISE` and `NE`",
+      "b": "`IS` and `NF`",
+      "c": "`IKF` and `RB`",
+      "d": "`VAF` and `VAR`"
+    },
+    "correctAnswer": "c",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "5. If an engineer extracts parameters but fails to account for the emitter resistance `RE`, how will this likely affect the extracted value of the high-injection parameter, `IKF`?",
+    "answers": {
+      "a": "The extracted `IKF` will be unaffected.",
+      "b": "The extracted `IKF` will appear higher (more ideal) than its true value.",
+      "c": "The extracted `IKF` will appear lower (less ideal) than its true value.",
+      "d": "The extracted `IKF` will become a negative number."
+    },
+    "correctAnswer": "c",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "6. The main transport saturation current, `IS`, is physically inversely proportional to which quantity?",
+    "answers": {
+      "a": "The base-emitter junction area.",
+      "b": "The intrinsic carrier concentration, $n_i^2$.",
+      "c": "The base Gummel Number (total integrated doping in the base).",
+      "d": "The forward current gain, `BF`."
+    },
+    "correctAnswer": "c",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "7. The Gummel-Poon parameter `BF` (Ideal Maximum Forward Beta) models the ratio of which two current *components*?",
+    "answers": {
+      "a": "Total collector current ($I_c$) and total base current ($I_b$).",
+      "b": "Ideal collector diffusion current and ideal base diffusion current.",
+      "c": "Collector current at `IKF` and base current at `IKF`.",
+      "d": "Ideal collector diffusion current and non-ideal base recombination current."
+    },
+    "correctAnswer": "b",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "8. Besides numerical optimization, what graphical technique is often used to extract the base resistance, `RB`?",
+    "answers": {
+      "a": "Extrapolating the $log(I_c)$ curve to $V_{be} = 0$.",
+      "b": "Measuring the slope of the $log(I_b)$ curve at low $V_{be}$.",
+      "c": "Analyzing the deviation of the $I_b$ curve from its ideal slope at high currents.",
+      "d": "Plotting $I_c$ vs. $V_{ce}$ (an output characteristic plot)."
+    },
+    "correctAnswer": "c",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "9. How does a significant increase in temperature typically affect a forward Gummel plot?",
+    "answers": {
+      "a": "It shifts both $I_c$ and $I_b$ curves to the right (higher $V_{be}$).",
+      "b": "It shifts both $I_c$ and $I_b$ curves to the left (lower $V_{be}$).",
+      "c": "It only increases the current gain, `BF`, without shifting the curves.",
+      "d": "It only increases the high-injection knee current, `IKF`."
+    },
+    "correctAnswer": "b",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "10. The total base current $I_b$ in the SPICE model is a sum of several components. Which component is *also* modeled but is typically negligible in a *forward* Gummel plot ($V_{bc}=0$)?",
+    "answers": {
+      "a": "The ideal base current (modeled by `IS`/`BF`).",
+      "b": "The B-E non-ideal recombination current (modeled by `ISE`).",
+      "c": "The B-C leakage/recombination current (modeled by `ISC` and `NC`).",
+      "d": "The component of base current due to high-level injection."
+    },
+    "correctAnswer": "c",
+    "difficulty": "intermediate"
+  }
+
   ]
 }

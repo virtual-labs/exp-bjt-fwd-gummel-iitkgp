@@ -1,39 +1,118 @@
-{
-  "version": 2.0,
+
+  {
+	  "version": 2.0,
   "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+    
+  {
+    "question": "1. What two currents are typically plotted against $V_{be}$ on a logarithmic scale in a forward Gummel plot (with $V_{bc} = 0$)?",
+    "answers": {
+      "a": "Collector Current ($I_c$) and Emitter Current ($I_e$)",
+      "b": "Collector Current ($I_c$) and Base Current ($I_b$)",
+      "c": "Base Current ($I_b$) and Emitter Current ($I_e$)",
+      "d": "Collector Current ($I_c$) and Base-Collector Leakage ($I_{bc}$)"
     },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
+    "correctAnswer": "b",
+    "difficulty": "beginner"
+  },
+  {
+    "question": "2. How is the main transport saturation current, `IS`, graphically extracted from the Gummel plot?",
+    "answers": {
+      "a": "By extrapolating the $log(I_b)$ curve in the low-current region back to $V_{be} = 0$.",
+      "b": "By finding the $V_{be}$ where $I_c = 1A$.",
+      "c": "By extrapolating the ideal (mid-current) $log(I_c)$ curve back to its $V_{be} = 0$ intercept.",
+      "d": "By measuring the slope of the $log(I_c)$ curve at its peak."
+    },
+    "correctAnswer": "c",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "3. The slope of the ideal $log(I_c)$ vs. $V_{be}$ curve is primarily determined by which SPICE parameter?",
+    "answers": {
+      "a": "`BF` (Forward Beta)",
+      "b": "`VAF` (Forward Early Voltage)",
+      "c": "`NF` (Forward Current Emission Coefficient)",
+      "d": "`IKF` (Forward High-Injection Knee)"
+    },
+    "correctAnswer": "c",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "4. In the low-current region, the $log(I_b)$ curve often shows a shallower slope than $log(I_c)$. Which parameter models the ideality factor of this non-ideal base current?",
+    "answers": {
+      "a": "`NE` (Base-Emitter Leakage Emission Coefficient)",
+      "b": "`NF` (Forward Current Emission Coefficient)",
+      "c": "`NR` (Reverse Current Emission Coefficient)",
+      "d": "`NC` (Collector Leakage Emission Coefficient)"
+    },
+    "correctAnswer": "a",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "5. Which SPICE parameter models the *magnitude* of the non-ideal base-emitter recombination current that is dominant at very low $V_{be}$?",
+    "answers": {
+      "a": "`IS` (Transport Saturation Current)",
+      "b": "`IKF` (High-Injection Knee Current)",
+      "c": "`ISE` (Base-Emitter Leakage Saturation Current)",
+      "d": "`ISC` (Base-Collector Leakage Saturation Current)"
+    },
+    "correctAnswer": "c",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "6. The parameter `BF` (Forward Beta) relates the ideal components of $I_c$ and $I_b$. It is extracted from the Gummel plot by:",
+    "answers": {
+      "a": "Finding the ratio $I_c / I_b$ in the high-injection (roll-off) region.",
+      "b": "Finding the ratio $I_c / I_b$ in the ideal region where both curves are parallel.",
+      "c": "Finding the slope of the $I_c$ curve.",
+      "d": "Finding the $V_{be}$ where $I_c = I_b$."
+    },
+    "correctAnswer": "b",
+    "difficulty": "beginner"
+  },
+  {
+    "question": "7. What physical effect, modeled by the parameter `IKF`, causes the $log(I_c)$ curve to roll off (i.e., its slope decreases) at high $V_{be}$?",
+    "answers": {
+      "a": "High-level injection in the base",
+      "b": "Avalanche breakdown",
+      "c": "Zener tunneling",
+      "d": "Early effect (base-width modulation)"
+    },
+    "correctAnswer": "a",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "8. At high $V_{be}$, the $log(I_b)$ curve also rolls off, often more severely than $log(I_c)$. This is primarily due to the voltage drop across which parasitic parameter?",
+    "answers": {
+      "a": "`RC` (Collector Series Resistance)",
+      "b": "`RE` (Emitter Series Resistance)",
+      "c": "`RB` (Base Series Resistance)",
+      "d": "`CJE` (Base-Emitter Capacitance)"
+    },
+    "correctAnswer": "c",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "9. A value of `NF` (Forward Emission Coefficient) extracted to be very close to 1.0 indicates that the collector current is dominated by what?",
+    "answers": {
+      "a": "Recombination in the base",
+      "b": "Diffusion of minority carriers across the base",
+      "c": "Avalanche multiplication in the collector",
+      "d": "Parasitic series resistance"
+    },
+    "correctAnswer": "b",
+    "difficulty": "beginner"
+  },
+  {
+    "question": "10. A value of `NE` (Leakage Emission Coefficient) extracted to be approximately 2.0 indicates that the low-level base current is dominated by what mechanism?",
+    "answers": {
+      "a": "Ideal diffusion from the emitter",
+      "b": "Recombination in the base-emitter space-charge region",
+      "c": "Surface leakage effects",
+      "d": "High-level injection"
+    },
+    "correctAnswer": "b",
+    "difficulty": "intermediate"
+  }
+
   ]
 }
