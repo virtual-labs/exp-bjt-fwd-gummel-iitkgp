@@ -70,7 +70,7 @@
     "difficulty": "beginner"
   },
   {
-    "question": "7. What physical effect, modeled by the parameter `IKF`, causes the $log(I_c)$ curve to "roll off" (i.e., its slope decreases) at high $V_{be}$?",
+    "question": "7. What physical effect, modeled by the parameter `IKF`, causes the $log(I_c)$ curve to roll off (i.e., its slope decreases) at high $V_{be}$?",
     "answers": {
       "a": "High-level injection in the base",
       "b": "Avalanche breakdown",
