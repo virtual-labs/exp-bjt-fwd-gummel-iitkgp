@@ -11,7 +11,7 @@
       "d": "It shifts the entire $I_c$ curve downwards, changing the extracted `IS`."
     },
     "correctAnswer": "b",
-    "difficulty": "intermediate"
+    "difficulty": "Beginner"
   },
   {
     "question": "2. What is the characteristic effect of the collector series resistance, `RC`, on a forward Gummel plot measured at $V_{bc} = 0$?",
