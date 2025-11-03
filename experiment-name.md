@@ -1,0 +1,1 @@
+## Extraction of bipolar SPICE Gummel-Poon parameters related to forward Gummel (Ic and Ib vs. Vbe) characteristics &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="images/iitkgp.png" width="3%" />
